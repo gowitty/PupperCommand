@@ -1,3 +1,21 @@
+#changes
+```shell
+#PupperCommand/joystick.py 
+
+#Deaulf IP
+ip = "127.0.0.1"
+port = 5500
+
+#joystick_pub = Publisher(8830)
+#joystick_subcriber = Subscriber(8840, timeout=0.01)
+joystick_pub = Publisher(port, ip)
+joystick_subcriber = Subscriber(port, timeout=0.01)
+```
+
+```shell
+#joystick.led_color(**msg["ps4_color"])
+```
+
 # PupperCommand
 ## Installation
 ```shell
