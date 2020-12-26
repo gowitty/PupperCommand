@@ -60,8 +60,8 @@ while True:
     joystick_pub.send(msg)
 
     try:
+        #get msg from JoystickInterface.udp_publisher
         msg = joystick_subcriber.get()
-        #to chech why errr here
         joystick.led_color(**msg["ps4_color"])
     except timeout:
         pass
