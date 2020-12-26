@@ -65,7 +65,8 @@ while True:
 
     try:
         msg = joystick_subcriber.get()
-        joystick.led_color(**msg["ps4_color"])
+        #to chech why errr here
+        #joystick.led_color(**msg["ps4_color"])
     except timeout:
         pass
 
