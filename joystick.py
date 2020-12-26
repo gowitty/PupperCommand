@@ -9,14 +9,10 @@ import time
 MESSAGE_RATE = 20
 PUPPER_COLOR = {"red":0, "blue":255, "green":0}
 
-#Deaulf IP
-ip = "127.0.0.1"
-port = 5500
-
 #joystick_pub = Publisher(8830)
-#joystick_subcriber = Subscriber(8840, timeout=0.01)
-joystick_pub = Publisher(port, ip)
-joystick_subcriber = Subscriber(port, timeout=0.01)
+#Deaulf IP change to 127.0.0.1
+joystick_pub = Publisher(8830, "127.0.0.1")
+joystick_subcriber = Subscriber(8840, timeout=0.01)
 
 joystick = Joystick()
 joystick.led_color(**PUPPER_COLOR)
@@ -66,7 +62,7 @@ while True:
     try:
         msg = joystick_subcriber.get()
         #to chech why errr here
-        #joystick.led_color(**msg["ps4_color"])
+        joystick.led_color(**msg["ps4_color"])
     except timeout:
         pass
 
