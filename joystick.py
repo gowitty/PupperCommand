@@ -7,7 +7,7 @@ import time
 
 ## Configurable ##
 MESSAGE_RATE = 20
-PUPPER_COLOR = {"red":0, "blue":0, "green":255}
+PUPPER_COLOR = {"red":0, "blue":255, "green":0}
 
 #Deaulf IP
 ip = "127.0.0.1"
